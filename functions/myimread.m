@@ -35,11 +35,11 @@ function I = myimread(fname)
 	% If Octave does not support your image's file format, you'll
 	% need to add a special purpose function to decode the image's
 	% data.
-	if (~read_16bit_pgm_test() && strcmpi(ext, '.PGM'))
+	if (strcmpi(ext, '.PGM') && ~read_16bit_pgm_test())
 		I = double(pnmread(fname));
-	%elseif (~read_16bit_tiff_test() && strcmpi(ext, '.TIFF'))
+	%elseif (strcmpi(ext, '.TIFF') && ~read_16bit_tiff_test())
 	%	I = double(tiffread(fname));
-	else
+    else
 		I = double(imread(fname));
 	end
 end

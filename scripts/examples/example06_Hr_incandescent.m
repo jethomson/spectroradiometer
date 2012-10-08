@@ -70,7 +70,7 @@ E1 = trapz(Ee_gray(n0:nf)).*(so.dlambda); % irradiance, [W/m^2]
 disp(['irradiance (E1) : ' num2str(E1) ' W/m^2 at distance '...
       num2str(distance) ' m.'])
 %disp(['irradiance : ' num2str(100*E1) ' uW/cm^2 at distance '...
-%      num2str(distance/100) ' cm.'])
+%      num2str(100*distance) ' cm.'])
 
 
 %----------------------------
