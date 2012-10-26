@@ -123,7 +123,7 @@ function [Ee, E] = TSL230_fO_to_irradiance(lambda, X, fO, sensitivity, sensor_ty
 	end
 
 	if (~exist('dist_type','var') || isempty(dist_type))
-		sensor_type = 'power';
+		dist_type = 'power';
 	end
 
 	if ~strcmpi(sensor_type, 'TSL230') && ~strcmpi(sensor_type, 'TSL230R') && ~strcmpi(sensor_type, 'TSL230RD')
